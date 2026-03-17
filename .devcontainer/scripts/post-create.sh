@@ -23,7 +23,7 @@ fix_volume_ownership() {
   local volume_path="$1"
 
   if [[ ! -d "$volume_path" ]]; then
-    echo "ERROR: the volume path provided '$volume_path' does not exist."
+    echo "ERROR: the volume path provided '$volume_path' does not exist." >&2
     exit 1
   fi
 
